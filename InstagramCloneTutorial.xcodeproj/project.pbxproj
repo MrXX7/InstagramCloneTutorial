@@ -23,6 +23,7 @@
 		AD554DF6282808AB006DF648 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD554DF5282808AB006DF648 /* MainView.swift */; };
 		AD554DF928281C79006DF648 /* UploadPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD554DF828281C79006DF648 /* UploadPostView.swift */; };
 		AD554DFB28281CD0006DF648 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD554DFA28281CD0006DF648 /* ContentView.swift */; };
+		AD554DFD282820DB006DF648 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD554DFC282820DB006DF648 /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		AD554DF5282808AB006DF648 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AD554DF828281C79006DF648 /* UploadPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostView.swift; sourceTree = "<group>"; };
 		AD554DFA28281CD0006DF648 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AD554DFC282820DB006DF648 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				AD554DF3282808A4006DF648 /* FeedView.swift */,
+				AD554DFC282820DB006DF648 /* FeedCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				AD554DF928281C79006DF648 /* UploadPostView.swift in Sources */,
 				AD554DF4282808A4006DF648 /* FeedView.swift in Sources */,
 				AD554DF028280877006DF648 /* NotificationsView.swift in Sources */,
+				AD554DFD282820DB006DF648 /* FeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
