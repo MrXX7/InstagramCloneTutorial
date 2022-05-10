@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD44C3C3282AE2070073B943 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD44C3C2282AE2070073B943 /* SearchBar.swift */; };
+		AD44C3C5282AFAD50073B943 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD44C3C4282AFAD50073B943 /* Extensions.swift */; };
 		AD554DC32827B6D4006DF648 /* InstagramCloneTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD554DC22827B6D4006DF648 /* InstagramCloneTutorialApp.swift */; };
 		AD554DC72827B6D7006DF648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD554DC62827B6D7006DF648 /* Assets.xcassets */; };
 		AD554DCA2827B6D7006DF648 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD554DC92827B6D7006DF648 /* Preview Assets.xcassets */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD44C3C2282AE2070073B943 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		AD44C3C4282AFAD50073B943 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AD554DBF2827B6D4006DF648 /* InstagramCloneTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramCloneTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD554DC22827B6D4006DF648 /* InstagramCloneTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCloneTutorialApp.swift; sourceTree = "<group>"; };
 		AD554DC62827B6D7006DF648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 		AD554DD82827B7CF006DF648 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AD44C3C4282AFAD50073B943 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				AD554DF128280891006DF648 /* SearchView.swift */,
+				AD44C3C2282AE2070073B943 /* SearchBar.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -289,8 +295,10 @@
 				AD554DC32827B6D4006DF648 /* InstagramCloneTutorialApp.swift in Sources */,
 				AD554DF928281C79006DF648 /* UploadPostView.swift in Sources */,
 				AD554DF4282808A4006DF648 /* FeedView.swift in Sources */,
+				AD44C3C5282AFAD50073B943 /* Extensions.swift in Sources */,
 				AD554DF028280877006DF648 /* NotificationsView.swift in Sources */,
 				AD977D5E282988680082957B /* PostGridView.swift in Sources */,
+				AD44C3C3282AE2070073B943 /* SearchBar.swift in Sources */,
 				AD554DFD282820DB006DF648 /* FeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
