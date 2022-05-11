@@ -18,10 +18,10 @@ struct NotificationCell: View {
             Text("tedmosby")
                 .font(.system(size: 14, weight: .semibold))
             +
-            Text("has followed you.")
+            Text(" has followed you.")
                 .font(.system(size: 15))
             +
-            Text("2H")
+            Text(" 2H")
                 .foregroundColor(.gray)
                 .font(.system(size: 12))
             
@@ -38,6 +38,7 @@ struct NotificationCell: View {
                         .stroke(Color.gray, lineWidth: 1)
             )
         }
+        .padding(.horizontal)
     }
 }
 

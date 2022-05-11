@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct UploadPostView: View {
+    
+    
+    @State private var selectedImage: UIImage?
+    @State var postImage: Image
+    @State var captionText = ""
+    
     var body: some View {
-        Text("Upload")
-    }
-}
-
-struct UploadPostView_Previews: PreviewProvider {
-    static var previews: some View {
-        UploadPostView()
+        Image(systemName: "plus.circle")
+            .resizable()
+            .scaledToFill()
+            .frame(width: 100, height: 100)
+            .clipped()
+            .padding(.top)
+            .foregroundColor(.black)
     }
 }
