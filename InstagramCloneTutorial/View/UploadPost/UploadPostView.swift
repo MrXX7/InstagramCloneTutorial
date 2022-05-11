@@ -44,19 +44,20 @@ struct UploadPostView: View {
                         .frame(width: 96, height: 96)
                         .clipped()
                     
-                    TextField("Enter your caption...", text: $captionText)
+                    TextArea(text: $captionText, placeholder: "Enter your caption...")
                     
                 }
                 .padding()
                 
-                Button(action: {}, label: {
+                Button {
+                } label: {
                     Text("Share")
                         .font(.system(size: 16, weight: .semibold))
                         .frame(width: 360, height: 50)
                         .background(.blue)
                         .cornerRadius(5)
                         .foregroundColor(.white)
-                })
+                }
                        Spacer()
             }
         }
