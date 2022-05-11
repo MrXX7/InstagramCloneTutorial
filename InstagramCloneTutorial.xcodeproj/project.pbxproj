@@ -28,6 +28,7 @@
 		AD554DFD282820DB006DF648 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD554DFC282820DB006DF648 /* FeedCell.swift */; };
 		AD977402282B5B140078F929 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD977401282B5B140078F929 /* UserListView.swift */; };
 		AD977404282B5B340078F929 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD977403282B5B340078F929 /* UserCell.swift */; };
+		AD977406282B5EE70078F929 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD977405282B5EE70078F929 /* NotificationCell.swift */; };
 		AD977D5E282988680082957B /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD977D5D282988680082957B /* PostGridView.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		AD554DFC282820DB006DF648 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		AD977401282B5B140078F929 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		AD977403282B5B340078F929 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		AD977405282B5EE70078F929 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		AD977D5D282988680082957B /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				AD554DEF28280877006DF648 /* NotificationsView.swift */,
+				AD977405282B5EE70078F929 /* NotificationCell.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				AD977D5E282988680082957B /* PostGridView.swift in Sources */,
 				AD44C3C3282AE2070073B943 /* SearchBar.swift in Sources */,
 				AD554DFD282820DB006DF648 /* FeedCell.swift in Sources */,
+				AD977406282B5EE70078F929 /* NotificationCell.swift in Sources */,
 				AD977402282B5B140078F929 /* UserListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
