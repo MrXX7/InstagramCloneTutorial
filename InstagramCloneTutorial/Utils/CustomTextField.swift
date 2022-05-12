@@ -17,7 +17,7 @@ struct CustomTextField: View {
         ZStack(alignment: .leading) {
             if text.isEmpty {
                 placeholder
-                    .foregroundColor(Color(.init(white: 1, alpha: 0.8)))
+                    .foregroundColor(.black)
                     .padding(.leading, 40)
             }
             HStack {
