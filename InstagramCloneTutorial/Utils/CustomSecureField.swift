@@ -1,5 +1,5 @@
 //
-//  CustomTextField.swift
+//  CustomSecureField.swift
 //  InstagramCloneTutorial
 //
 //  Created by Oncu Ohancan on 12.05.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CustomTextField: View {
+struct CustomSecureField: View {
     
     @Binding var text: String
     let placeholder: Text
@@ -21,13 +21,13 @@ struct CustomTextField: View {
                     .padding(.leading, 40)
             }
             HStack {
-                Image(systemName: imageName)
+                Image(systemName: "lock")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 20, height: 20)
                     .foregroundColor(.black)
                 
-                TextField("", text: $text)
+                SecureField("", text: $text)
             }
             .padding(.leading)
         }
