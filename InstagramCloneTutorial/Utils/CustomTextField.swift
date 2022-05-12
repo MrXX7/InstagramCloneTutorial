@@ -18,7 +18,7 @@ struct CustomTextField: View {
             if text.isEmpty {
                 placeholder
                     .foregroundColor(.black)
-                    .padding(.leading, 40)
+                    .padding(.leading, 52)
             }
             HStack {
                 Image(systemName: imageName)
@@ -28,6 +28,7 @@ struct CustomTextField: View {
                     .foregroundColor(.black)
                 
                 TextField("", text: $text)
+                    .padding(.leading, 8)
             }
             .padding(.leading)
         }

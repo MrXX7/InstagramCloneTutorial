@@ -38,6 +38,7 @@
 		ADE6607D282D0D9F001586BC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6607C282D0D9F001586BC /* SignInView.swift */; };
 		ADE6607F282D0E96001586BC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6607E282D0E96001586BC /* CustomTextField.swift */; };
 		ADE66083282D1EA4001586BC /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE66082282D1EA4001586BC /* CustomSecureField.swift */; };
+		ADE66085282D3448001586BC /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE66084282D3448001586BC /* ForgotPasswordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		ADE6607C282D0D9F001586BC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		ADE6607E282D0E96001586BC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		ADE66082282D1EA4001586BC /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
+		ADE66084282D3448001586BC /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 			children = (
 				ADE6607A282D0D8D001586BC /* RegisterView.swift */,
 				ADE6607C282D0D9F001586BC /* SignInView.swift */,
+				ADE66084282D3448001586BC /* ForgotPasswordView.swift */,
 			);
 			path = Authentications;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				AD977404282B5B340078F929 /* UserCell.swift in Sources */,
 				AD554DF4282808A4006DF648 /* FeedView.swift in Sources */,
 				AD44C3C5282AFAD50073B943 /* Extensions.swift in Sources */,
+				ADE66085282D3448001586BC /* ForgotPasswordView.swift in Sources */,
 				AD554DF028280877006DF648 /* NotificationsView.swift in Sources */,
 				AD9362EF282C2CE100FD5BE2 /* TextArea.swift in Sources */,
 				ADE6607F282D0E96001586BC /* CustomTextField.swift in Sources */,
