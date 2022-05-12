@@ -33,7 +33,7 @@ struct SignInView: View {
                 
                 HStack {
                     Spacer()
-                    NavigationLink(destination: ForgotPasswordView(), label: {
+                    NavigationLink(destination: ForgotPasswordView(email: $email).navigationBarHidden(true), label: {
                         Text("Forgot Password")
                             .font(.system(size: 13, weight: .semibold))
                             .foregroundColor(.gray)
@@ -53,7 +53,7 @@ struct SignInView: View {
                 })
                 Spacer()
                 
-                NavigationLink(destination: RegisterView(), label: {
+                NavigationLink(destination: RegisterView().navigationBarHidden(true), label: {
                     HStack {
                         Text("Don't have an account?")
                             .font(.system(size: 14, weight: .semibold))
