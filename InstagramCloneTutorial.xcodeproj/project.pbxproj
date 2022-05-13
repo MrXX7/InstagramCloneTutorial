@@ -34,6 +34,7 @@
 		AD977406282B5EE70078F929 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD977405282B5EE70078F929 /* NotificationCell.swift */; };
 		AD977409282B8CE00078F929 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD977408282B8CE00078F929 /* ImagePicker.swift */; };
 		AD977D5E282988680082957B /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD977D5D282988680082957B /* PostGridView.swift */; };
+		ADAE269D282ECDB900241256 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADAE269C282ECDB900241256 /* GoogleService-Info.plist */; };
 		ADE6607B282D0D8D001586BC /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6607A282D0D8D001586BC /* RegisterView.swift */; };
 		ADE6607D282D0D9F001586BC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6607C282D0D9F001586BC /* SignInView.swift */; };
 		ADE6607F282D0E96001586BC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6607E282D0E96001586BC /* CustomTextField.swift */; };
@@ -64,6 +65,7 @@
 		AD977405282B5EE70078F929 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		AD977408282B8CE00078F929 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		AD977D5D282988680082957B /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
+		ADAE269C282ECDB900241256 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ADE6607A282D0D8D001586BC /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		ADE6607C282D0D9F001586BC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		ADE6607E282D0E96001586BC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		AD554DD52827B7B0006DF648 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				ADAE269C282ECDB900241256 /* GoogleService-Info.plist */,
 			);
 			name = ViewModel;
 			path = "VİEWMODEL";
@@ -322,6 +325,7 @@
 			files = (
 				AD554DCA2827B6D7006DF648 /* Preview Assets.xcassets in Resources */,
 				AD554DC72827B6D7006DF648 /* Assets.xcassets in Resources */,
+				ADAE269D282ECDB900241256 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
