@@ -28,6 +28,7 @@
 		AD554DF928281C79006DF648 /* UploadPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD554DF828281C79006DF648 /* UploadPostView.swift */; };
 		AD554DFB28281CD0006DF648 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD554DFA28281CD0006DF648 /* ContentView.swift */; };
 		AD554DFD282820DB006DF648 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD554DFC282820DB006DF648 /* FeedCell.swift */; };
+		AD74612E28301BC70070F355 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD74612D28301BC70070F355 /* AuthViewModel.swift */; };
 		AD9362EF282C2CE100FD5BE2 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9362EE282C2CE100FD5BE2 /* TextArea.swift */; };
 		AD977402282B5B140078F929 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD977401282B5B140078F929 /* UserListView.swift */; };
 		AD977404282B5B340078F929 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD977403282B5B340078F929 /* UserCell.swift */; };
@@ -59,6 +60,7 @@
 		AD554DF828281C79006DF648 /* UploadPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostView.swift; sourceTree = "<group>"; };
 		AD554DFA28281CD0006DF648 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AD554DFC282820DB006DF648 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		AD74612D28301BC70070F355 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		AD9362EE282C2CE100FD5BE2 /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		AD977401282B5B140078F929 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		AD977403282B5B340078F929 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -132,6 +134,11 @@
 		AD554DD52827B7B0006DF648 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AD74612C28301BA90070F355 /* Profile */,
+				AD74612B28301BA40070F355 /* Upload */,
+				AD74612A28301B9F0070F355 /* Search */,
+				AD74612928301B9C0070F355 /* Feed */,
+				AD74612828301B920070F355 /* Authentication */,
 				ADAE269C282ECDB900241256 /* GoogleService-Info.plist */,
 			);
 			name = ViewModel;
@@ -230,6 +237,42 @@
 				AD554DF828281C79006DF648 /* UploadPostView.swift */,
 			);
 			path = UploadPost;
+			sourceTree = "<group>";
+		};
+		AD74612828301B920070F355 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				AD74612D28301BC70070F355 /* AuthViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		AD74612928301B9C0070F355 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		AD74612A28301B9F0070F355 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		AD74612B28301BA40070F355 /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Upload;
+			sourceTree = "<group>";
+		};
+		AD74612C28301BA90070F355 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		AD977D5C282988510082957B /* Items */ = {
@@ -356,6 +399,7 @@
 				ADE6607D282D0D9F001586BC /* SignInView.swift in Sources */,
 				AD3F187B282CC24200837D80 /* ProfileHeaderView.swift in Sources */,
 				AD554DFD282820DB006DF648 /* FeedCell.swift in Sources */,
+				AD74612E28301BC70070F355 /* AuthViewModel.swift in Sources */,
 				ADE66083282D1EA4001586BC /* CustomSecureField.swift in Sources */,
 				AD977409282B8CE00078F929 /* ImagePicker.swift in Sources */,
 				AD977406282B5EE70078F929 /* NotificationCell.swift in Sources */,
