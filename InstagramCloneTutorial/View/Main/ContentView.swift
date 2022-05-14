@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        RegisterView().environmentObject(AuthViewModel())
+        RegisterView().environmentObject(AuthViewModel.shared)
     }
 }
 
