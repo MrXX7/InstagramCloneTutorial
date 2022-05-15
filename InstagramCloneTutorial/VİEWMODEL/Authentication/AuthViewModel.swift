@@ -14,6 +14,10 @@ class AuthViewModel: ObservableObject {
     
     static let shared = AuthViewModel()
     
+    init() {
+        userSession = Auth.auth().currentUser
+    }
+    
     func login(withEmail email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
             if let err = err {
