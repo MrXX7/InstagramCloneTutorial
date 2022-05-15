@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseStorage
+import Firebase
 
 class ProfileViewModel: ObservableObject {
     @Published var user: User
@@ -31,6 +32,15 @@ class ProfileViewModel: ObservableObject {
                     return
                 }
                 guard let imageURL = url?.absoluteString else { return }
+                
+                guard let uid = self.user.id else { return }
+                
+                Firestore.firestore().collection("users").document(uid).updateData(["profileImageURL": imageURL]) { err in
+                    if let err = err {
+                        print(err.localizedDescription)
+                        return
+                    }
+                }
             }
         }
     }
