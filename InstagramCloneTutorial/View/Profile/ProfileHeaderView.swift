@@ -13,12 +13,13 @@ struct ProfileHeaderView: View {
     @State var selectedImage: UIImage?
     @State var userImage: Image?
     @State var imagePickerRepresented = false
+    @ObservedObject var viewModel: ProfileViewModel
     
     var body: some View {
         VStack(alignment: .leading){
             HStack {
                 ZStack {
-                    if let imageURL = AuthViewModel.shared.currentUser?.profileImageURL {
+                    if let imageURL = viewModel.user.profileImageURL {
                         KFImage(URL(string: imageURL))
                             .resizable()
                             .frame(width: 80, height: 80)
@@ -49,7 +50,7 @@ struct ProfileHeaderView: View {
                     UserStats(value: 210, title: "Following")
                 }.padding(.trailing, 32)
             }
-            Text(AuthViewModel.shared.currentUser?.fullname ?? "asdd")
+            Text(viewModel.user.fullname ?? "")
                 .font(.system(size: 15, weight: .bold))
                 .padding([.leading, .top])
             }
@@ -58,6 +59,8 @@ struct ProfileHeaderView: View {
     extension ProfileHeaderView {
         func loadImage() {
             guard let selectedImage = selectedImage else { return }
-            userImage = Image(uiImage: selectedImage)
-        }
+            viewModel.changeProfileImage(image: selectedImage) { (_) in
+                print("DEBUG: Uploaded Image")
+            }
+       }
 }
