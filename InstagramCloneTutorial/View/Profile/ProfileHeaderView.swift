@@ -6,16 +6,40 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ProfileHeaderView: View {
+    
+    @State var selectedImage: UIImage?
+    @State var userImage: Image?
+    @State var imagePickerRepresented = false
+    
     var body: some View {
         VStack(alignment: .leading){
             HStack {
-                Image("ted")
-                    .resizable()
-                    .frame(width: 80, height: 80)
-                    .clipShape(Circle())
-                    .padding(.leading, 16)
+                ZStack {
+                    if let imageURL = AuthViewModel.shared.currentUser?.profileImageURL {
+                        KFImage(URL(string: imageURL))
+                            .resizable()
+                            .frame(width: 80, height: 80)
+                            .clipShape(Circle())
+                            .padding(.leading, 16)
+                }
+                    else {
+                        Button(action: {
+                            self.imagePickerRepresented.toggle()
+                        }, label: {
+                            Image("profile-placeholder")
+                                .resizable()
+                                .frame(width: 80, height: 80)
+                                .clipShape(Circle())
+                                .padding(.leading, 16)
+                        }).sheet(isPresented: $imagePickerRepresented, onDismiss: loadImage, content: {
+                            ImagePicker(image: $selectedImage)
+                        })
+                    }
+                }
+                
                 
                 Spacer()
                 
@@ -24,19 +48,16 @@ struct ProfileHeaderView: View {
                     UserStats(value: 210, title: "Followers")
                     UserStats(value: 210, title: "Following")
                 }.padding(.trailing, 32)
-                
-                Text("")
-                
-                Text(AuthViewModel.shared.currentUser?.fullname ?? "")
-                    .font(.system(size: 15, weight: .bold))
-                    .padding([.leading, .top])
+            }
+            Text(AuthViewModel.shared.currentUser?.fullname ?? "asdd")
+                .font(.system(size: 15, weight: .bold))
+                .padding([.leading, .top])
             }
         }
     }
-}
-
-struct ProfileHeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileHeaderView()
-    }
+    extension ProfileHeaderView {
+        func loadImage() {
+            guard let selectedImage = selectedImage else { return }
+            userImage = Image(uiImage: selectedImage)
+        }
 }
