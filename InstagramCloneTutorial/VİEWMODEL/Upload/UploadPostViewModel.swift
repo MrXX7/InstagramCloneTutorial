@@ -17,7 +17,7 @@ class UploadPostViewModel: ObservableObject {
         guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
         
         let filename = NSUUID().uuidString
-        let ref = Storage.storage().reference(withPath: "/profile_images/\(filename)")
+        let ref = Storage.storage().reference(withPath: "/post_images/\(filename)")
         
         ref.putData(imageData, metadata: nil) { (_, err ) in
             if let err = err {

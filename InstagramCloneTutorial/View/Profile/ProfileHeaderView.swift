@@ -20,11 +20,17 @@ struct ProfileHeaderView: View {
             HStack {
                 ZStack {
                     if let imageURL = viewModel.user.profileImageURL {
-                        KFImage(URL(string: imageURL))
-                            .resizable()
-                            .frame(width: 80, height: 80)
-                            .clipShape(Circle())
-                            .padding(.leading, 16)
+                        Button {
+                            self.imagePickerRepresented.toggle()
+                        } label: {
+                            KFImage(URL(string: imageURL))
+                                .resizable()
+                                .frame(width: 80, height: 80)
+                                .clipShape(Circle())
+                                .padding(.leading, 16)
+                        }.sheet(isPresented: $imagePickerRepresented, onDismiss: loadImage, content: {
+                            ImagePicker(image: $selectedImage)
+                        })
                 }
                     else {
                         Button(action: {
