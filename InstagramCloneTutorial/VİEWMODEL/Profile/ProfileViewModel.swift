@@ -15,7 +15,7 @@ class ProfileViewModel: ObservableObject {
     init(user: User) {
         self.user = user
     }
-    func changeProfileImage(image: UIImage, completion: @escaping(String)-> Void) {
+    func changeProfileImage(image: UIImage, completion: @escaping(String) -> Void) {
         guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
         
         let filename = NSUUID().uuidString
