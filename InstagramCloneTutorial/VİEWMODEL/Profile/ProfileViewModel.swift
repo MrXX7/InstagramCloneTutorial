@@ -19,7 +19,7 @@ class ProfileViewModel: ObservableObject {
      
         guard let uid = user.id else { return }
         
-        ImageUploader.uploadImage(image: image) { imageURL in
+        ImageUploader.uploadImage(image: image, type: .profile) { imageURL in
             
             Firestore.firestore().collection("users").document(uid).updateData(["profileImageURL": imageURL])
             { err in
