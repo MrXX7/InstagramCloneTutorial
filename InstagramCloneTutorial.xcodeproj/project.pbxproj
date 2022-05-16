@@ -39,6 +39,7 @@
 		AD977D5E282988680082957B /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD977D5D282988680082957B /* PostGridView.swift */; };
 		ADAE269D282ECDB900241256 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADAE269C282ECDB900241256 /* GoogleService-Info.plist */; };
 		ADAE328D2832217D00339BC9 /* ProfileButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE328C2832217D00339BC9 /* ProfileButtonView.swift */; };
+		ADAE328F283232FE00339BC9 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE328E283232FE00339BC9 /* UploadPostViewModel.swift */; };
 		ADE6607B282D0D8D001586BC /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6607A282D0D8D001586BC /* RegisterView.swift */; };
 		ADE6607D282D0D9F001586BC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6607C282D0D9F001586BC /* SignInView.swift */; };
 		ADE6607F282D0E96001586BC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6607E282D0E96001586BC /* CustomTextField.swift */; };
@@ -74,6 +75,7 @@
 		AD977D5D282988680082957B /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
 		ADAE269C282ECDB900241256 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ADAE328C2832217D00339BC9 /* ProfileButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButtonView.swift; sourceTree = "<group>"; };
+		ADAE328E283232FE00339BC9 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 		ADE6607A282D0D8D001586BC /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		ADE6607C282D0D9F001586BC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		ADE6607E282D0E96001586BC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 		AD74612B28301BA40070F355 /* Upload */ = {
 			isa = PBXGroup;
 			children = (
+				ADAE328E283232FE00339BC9 /* UploadPostViewModel.swift */,
 			);
 			path = Upload;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				AD9362EF282C2CE100FD5BE2 /* TextArea.swift in Sources */,
 				ADE6607F282D0E96001586BC /* CustomTextField.swift in Sources */,
 				AD977D5E282988680082957B /* PostGridView.swift in Sources */,
+				ADAE328F283232FE00339BC9 /* UploadPostViewModel.swift in Sources */,
 				AD3F187D282CC33100837D80 /* UserStats.swift in Sources */,
 				AD44C3C3282AE2070073B943 /* SearchBar.swift in Sources */,
 				ADE6607D282D0D9F001586BC /* SignInView.swift in Sources */,
