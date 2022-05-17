@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD288ABE28333AC000E45FBC /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD288ABD28333AC000E45FBC /* SearchViewModel.swift */; };
 		AD2BF0432830FDD8003AD427 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BF0422830FDD8003AD427 /* User.swift */; };
 		AD2BF045283143DF003AD427 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BF044283143DF003AD427 /* ProfileViewModel.swift */; };
 		AD3F187B282CC24200837D80 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3F187A282CC24200837D80 /* ProfileHeaderView.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD288ABD28333AC000E45FBC /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		AD2BF0422830FDD8003AD427 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AD2BF044283143DF003AD427 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		AD3F187A282CC24200837D80 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 		AD74612A28301B9F0070F355 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				AD288ABD28333AC000E45FBC /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD288ABE28333AC000E45FBC /* SearchViewModel.swift in Sources */,
 				AD2BF0432830FDD8003AD427 /* User.swift in Sources */,
 				AD554DF228280891006DF648 /* SearchView.swift in Sources */,
 				ADE6607B282D0D8D001586BC /* RegisterView.swift in Sources */,
