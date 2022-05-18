@@ -14,7 +14,7 @@ class SearchViewModel: ObservableObject {
     @Published var users = [User]()
     
     init() {
-        fetchUser()
+        fetchUsers()
     }
     
     func fetchUsers() {
@@ -28,5 +28,10 @@ class SearchViewModel: ObservableObject {
             self.users = documents.compactMap({ try? $0.data(as: User.self)})
             print(self.users)
         }
+    }
+    func filterUsers(withText input: String) -> [User] {
+        let lowercasedInput = input.lowercased()
+        return users.filter({ $0.fullname.lowercased().contains(lowercasedInput) ||
+            $0.username.lowercased().contains(lowercasedInput) })
     }
 }
