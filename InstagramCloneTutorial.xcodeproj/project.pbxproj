@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD22EDE0283583B20027DF42 /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD22EDDF283583B20027DF42 /* GridViewModel.swift */; };
 		AD288ABE28333AC000E45FBC /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD288ABD28333AC000E45FBC /* SearchViewModel.swift */; };
 		AD2BF0432830FDD8003AD427 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BF0422830FDD8003AD427 /* User.swift */; };
 		AD2BF045283143DF003AD427 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BF044283143DF003AD427 /* ProfileViewModel.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD22EDDF283583B20027DF42 /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
 		AD288ABD28333AC000E45FBC /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		AD2BF0422830FDD8003AD427 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AD2BF044283143DF003AD427 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD22EDDE283583940027DF42 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				AD22EDDF283583B20027DF42 /* GridViewModel.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
 		AD554DB62827B6D4006DF648 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +160,7 @@
 		AD554DD52827B7B0006DF648 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AD22EDDE283583940027DF42 /* Items */,
 				AD74612C28301BA90070F355 /* Profile */,
 				AD74612B28301BA40070F355 /* Upload */,
 				AD74612A28301B9F0070F355 /* Search */,
@@ -435,6 +446,7 @@
 				ADE66083282D1EA4001586BC /* CustomSecureField.swift in Sources */,
 				AD977409282B8CE00078F929 /* ImagePicker.swift in Sources */,
 				AD977406282B5EE70078F929 /* NotificationCell.swift in Sources */,
+				AD22EDE0283583B20027DF42 /* GridViewModel.swift in Sources */,
 				AD977402282B5B140078F929 /* UserListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
