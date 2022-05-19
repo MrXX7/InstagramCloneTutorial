@@ -12,7 +12,13 @@ struct PostGridView: View {
     
     private let items = [GridItem(), GridItem(), GridItem()]
     private let width = UIScreen.main.bounds.width / 3
-    @ObservedObject var viewModel = GridViewModel()
+    let config: PostGridConfig
+    @ObservedObject var viewModel: GridViewModel
+    
+    init(config: PostGridConfig) {
+        self.config = config
+        self.viewModel = GridViewModel(config: config)
+    }
     
     var body: some View {
         LazyVGrid(columns: items, spacing: 2, content: {
@@ -24,7 +30,7 @@ struct PostGridView: View {
                     .clipped()
                 
             }
-        })
+        }) .padding(.horizontal)
     }
 }
 
