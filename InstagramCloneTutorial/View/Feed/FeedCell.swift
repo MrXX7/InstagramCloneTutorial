@@ -12,6 +12,10 @@ struct FeedCell: View {
     
     @ObservedObject var viewModel: FeedCellViewModel
     
+    var didLike: Bool {
+        return viewModel.post.didLike ?? false
+    }
+    
     init(viewModel: FeedCellViewModel) {
         self.viewModel = viewModel
     }
@@ -43,13 +47,17 @@ struct FeedCell: View {
                 .clipped()
             
             HStack(spacing: 16) {
-                Image(systemName: "heart")
-                    .resizable()
-                    .scaledToFill()
-                    .foregroundColor(.black)
-                    .frame(width: 20, height: 20)
-                    .font(.system(size: 20))
-                    .padding(4)
+                Button {
+                    viewModel.like()
+                } label: {
+                    Image(systemName: didLike ? "heart.fill" : "heart")
+                        .resizable()
+                        .scaledToFill()
+                        .foregroundColor(didLike ? .red : .black)
+                        .frame(width: 20, height: 20)
+                        .font(.system(size: 20))
+                        .padding(4)
+                }
                 Image(systemName: "bubble.right")
                     .resizable()
                     .scaledToFill()
@@ -68,7 +76,7 @@ struct FeedCell: View {
             .padding(.leading, 4)
             .foregroundColor(.black)
             
-            Text("25 Likes")
+            Text("\(viewModel.post.likes) likes")
                 .font(.system(size: 14, weight: .semibold))
                 .padding(.leading, 8)
                 .padding(.bottom, 0.5)

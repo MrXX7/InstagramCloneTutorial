@@ -20,4 +20,5 @@ struct Post: Identifiable, Decodable {
     let ownerImageURL: String
     
     var user: User?
+    var didLike: Bool? = false
 }
