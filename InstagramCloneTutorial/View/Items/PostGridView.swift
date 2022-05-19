@@ -33,9 +33,3 @@ struct PostGridView: View {
         }) .padding(.horizontal)
     }
 }
-
-struct PostGridView_Previews: PreviewProvider {
-    static var previews: some View {
-        PostGridView()
-    }
-}
