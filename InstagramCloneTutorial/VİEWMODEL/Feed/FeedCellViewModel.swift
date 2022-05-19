@@ -72,6 +72,35 @@ class FeedCellViewModel: ObservableObject {
     }
     
     func unlike() {
+        guard post.likes > 0 else { return }
+        guard let postUid = post.id else { return }
+        guard let userID = AuthViewModel.shared.userSession?.uid else { return }
         
+        Firestore.firestore().collection("posts").document(postUid).collection("post-likes").document(userID).delete {
+            (err) in
+            if let err = err {
+                print(err.localizedDescription)
+                return
+            }
+        Firestore.firestore().collection("users").document(userID).collection("user-likes").document(postUid).delete { (err) in
+            if let err = err {
+                print(err.localizedDescription)
+                return
+            }
+            self.post.didLike = false
+            self.post.likes -= 1
+            }
+        }
+    }
+    var timestamp: String {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.second, .minute, .hour, .day, .weekOfMonth]
+        formatter.maximumUnitCount = 1
+        formatter.unitsStyle = .abbreviated
+        return formatter.string(from: post.timestamp.dateValue(), to: Date()) ?? ""
+    }
+    var likeText: String {
+        let label = post.likes == 1 ? "like" : "likes"
+        return "\(post.likes) \(label)"
     }
 }
