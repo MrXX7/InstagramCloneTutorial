@@ -37,6 +37,7 @@ struct ProfileButtonView: View {
                             .frame(width: 172, height: 32)
                             .foregroundColor(.white)
                             .background(Color.blue)
+                            .cornerRadius(3)
                     }
                            Button {} label: {
                         Text("Message")

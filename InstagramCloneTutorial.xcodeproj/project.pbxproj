@@ -50,6 +50,7 @@
 		ADE6607F282D0E96001586BC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6607E282D0E96001586BC /* CustomTextField.swift */; };
 		ADE66083282D1EA4001586BC /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE66082282D1EA4001586BC /* CustomSecureField.swift */; };
 		ADE66085282D3448001586BC /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE66084282D3448001586BC /* ForgotPasswordView.swift */; };
+		ADFF909F2835E7E1006DD74B /* FeedCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF909E2835E7E1006DD74B /* FeedCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		ADE6607E282D0E96001586BC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		ADE66082282D1EA4001586BC /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		ADE66084282D3448001586BC /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		ADFF909E2835E7E1006DD74B /* FeedCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				AD892C272832C5D300652186 /* FeedViewModel.swift */,
+				ADFF909E2835E7E1006DD74B /* FeedCellViewModel.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				ADE66085282D3448001586BC /* ForgotPasswordView.swift in Sources */,
 				AD554DF028280877006DF648 /* NotificationsView.swift in Sources */,
 				AD892C282832C5D300652186 /* FeedViewModel.swift in Sources */,
+				ADFF909F2835E7E1006DD74B /* FeedCellViewModel.swift in Sources */,
 				AD9362EF282C2CE100FD5BE2 /* TextArea.swift in Sources */,
 				ADE6607F282D0E96001586BC /* CustomTextField.swift in Sources */,
 				AD977D5E282988680082957B /* PostGridView.swift in Sources */,
