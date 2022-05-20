@@ -24,6 +24,9 @@ class FeedCellViewModel: ObservableObject {
                 return
             }
             self.post.user = try? snap?.data(as: User.self)
+            
+            guard let userImageURL = self.post.user?.profileImageURL else { return }
+            self.post.ownerImageURL = userImageURL
         }
     }
     
