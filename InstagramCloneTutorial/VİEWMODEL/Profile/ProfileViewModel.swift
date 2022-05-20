@@ -58,15 +58,12 @@ class ProfileViewModel: ObservableObject {
     }
     
     func checkFollow() {
-        guard let userId = user.id else { return }
-        guard let currentUid = AuthViewModel.shared.userSession?.uid else { return }
+        guard !user.isCurrentUser else { return }
         
-        Firestore.firestore().collection("following").document(currentUid).collection("user-following").document(userId).getDocument { (snap, err) in
-            if let err = err {
-                print(err.localizedDescription)
-                return
-            }
-            guard let didFollow = snap?.exists else { return }
+        guard let userId = user.id else { return }
+        
+        UserService.checkFollow(userId: userId) { didFollow in
+            self.user.didFollow = didFollow
         }
     }
 }
