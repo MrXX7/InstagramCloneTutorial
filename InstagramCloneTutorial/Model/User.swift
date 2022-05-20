@@ -13,6 +13,7 @@ struct User: Decodable, Identifiable {
     let email: String
     let fullname: String
     var profileImageURL: String
+    var stats: UserStatsData?
     @DocumentID var id: String?
     
     var isCurrentUser: Bool {
@@ -20,4 +21,10 @@ struct User: Decodable, Identifiable {
     }
     
     var didFollow: Bool? = false
+}
+
+struct UserStatsData: Decodable {
+    var following: Int
+    var followers: Int
+    var posts: Int
 }
