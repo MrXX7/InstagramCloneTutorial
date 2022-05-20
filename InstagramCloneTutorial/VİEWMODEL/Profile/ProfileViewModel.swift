@@ -14,6 +14,7 @@ class ProfileViewModel: ObservableObject {
     
     init(user: User) {
         self.user = user
+        checkFollow()
     }
     func changeProfileImage(image: UIImage, completion: @escaping(String) -> Void) {
      
@@ -29,6 +30,43 @@ class ProfileViewModel: ObservableObject {
                 }
                 self.user.profileImageURL = imageURL
             }
+        }
+    }
+    
+    func follow() {
+        guard let userId = user.id else { return }
+        
+        UserService.follow(uid: userId) { (err) in
+            if let err = err {
+                print(err.localizedDescription)
+                return
+            }
+            self.user.didFollow = true
+        }
+    }
+    
+    func unfollow() {
+        guard let userId = user.id else { return }
+        
+        UserService.unfollow(uid: userId) { (err) in
+            if let err = err {
+                print(err.localizedDescription)
+                return
+            }
+            self.user.didFollow = false
+        }
+    }
+    
+    func checkFollow() {
+        guard let userId = user.id else { return }
+        guard let currentUid = AuthViewModel.shared.userSession?.uid else { return }
+        
+        Firestore.firestore().collection("following").document(currentUid).collection("user-following").document(userId).getDocument { (snap, err) in
+            if let err = err {
+                print(err.localizedDescription)
+                return
+            }
+            guard let didFollow = snap?.exists else { return }
         }
     }
 }

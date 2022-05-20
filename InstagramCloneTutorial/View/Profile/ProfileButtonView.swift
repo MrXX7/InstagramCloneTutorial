@@ -11,6 +11,10 @@ struct ProfileButtonView: View {
     
     @ObservedObject var viewModel: ProfileViewModel
     
+    var didFollow: Bool {
+        return viewModel.user.didFollow ?? false
+    }
+    
     var body: some View {
         if viewModel.user.isCurrentUser {
             
@@ -30,16 +34,18 @@ struct ProfileButtonView: View {
                    else {
                 HStack(spacing: 16) {
                     Button {
-                        if let userId =  viewModel.user.id {
-                            
+                        didFollow ? viewModel.unfollowe() : viewModel.follow()
                         }
-                    } label: {
-                        Text("Follow")
+                        label: {
+                            Text(didFollow ? "Following" : "Follow")
                             .font(.system(size: 14, weight: .semibold))
                             .frame(width: 172, height: 32)
-                            .foregroundColor(.white)
-                            .background(Color.blue)
-                            .cornerRadius(3)
+                            .foregroundColor(didFollow ? .black : .white)
+                            .background(didFollow ? Color.white : Color.blue)
+                            .overlay(
+                            RoundedRectangle(cornerRadius: 3)
+                                .stroke(Color.gray, lineWidth: didFollow ? 1 : 0)
+                            )
                     }
                            Button {} label: {
                         Text("Message")
@@ -54,4 +60,4 @@ struct ProfileButtonView: View {
                     }
                 }
           }
-    }
+}
