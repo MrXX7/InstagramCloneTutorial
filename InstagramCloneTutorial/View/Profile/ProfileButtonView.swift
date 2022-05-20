@@ -31,7 +31,7 @@ struct ProfileButtonView: View {
                 HStack(spacing: 16) {
                     Button {
                         if let userId =  viewModel.user.id {
-                            viewModel.follow(uid: userId)
+                            
                         }
                     } label: {
                         Text("Follow")

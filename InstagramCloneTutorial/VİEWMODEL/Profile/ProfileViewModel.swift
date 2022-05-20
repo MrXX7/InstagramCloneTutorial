@@ -31,20 +31,4 @@ class ProfileViewModel: ObservableObject {
             }
         }
     }
-    func follow(uid: String) {
-        guard let currentUid = AuthViewModel.shared.userSession?.uid else { return }
-        
-        Firestore.firestore().collection("following").document(currentUid).collection("user-following").document(uid).setData([:]) { (err) in
-            if let err = err {
-                print(err.localizedDescription)
-                return
-            }
-            Firestore.firestore().collection("followers").document(uid).collection("user-followers").document(uid).setData([:]) { (err) in
-                if let err = err {
-                    print(err.localizedDescription)
-                    return
-                }
-            }
-        }
-    }
 }
