@@ -42,6 +42,7 @@ class ProfileViewModel: ObservableObject {
                 print(err.localizedDescription)
                 return
             }
+            NotificationViewModel.sendNotification(withUid: userId, type: .follow)
             self.user.didFollow = true
         }
     }
