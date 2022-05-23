@@ -10,13 +10,17 @@ import Kingfisher
 
 struct NotificationCell: View {
     
-    let notification: Notification
+    @ObservedObject var viewModel: NotificationsCellViewModel
+    
+    init(viewModel: NotificationsCellViewModel) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
         HStack {
-            if let user = notification.user {
+            if let user = viewModel.notification.user {
                 NavigationLink(destination: ProfileView(user: user)) {
-                    if let user = notification.user {
-                        if let imageURL = notification.profileImageURL {
+                    if let imageURL = viewModel.notification.profileImageURL {
                             KFImage(URL(string: imageURL))
                                 .resizable()
                                 .scaledToFill()
@@ -24,13 +28,13 @@ struct NotificationCell: View {
                                 .clipShape(Circle())
                         }
                         
-                        Text(notification.username)
+                        Text(viewModel.notification.username)
                             .font(.system(size: 14, weight: .semibold))
                         +
-                        Text(notification.type.notificationsMessage)
+                        Text(viewModel.notification.type.notificationsMessage)
                             .font(.system(size: 15))
                         +
-                        Text(" 2H")
+                        Text(viewModel.timestamp)
                             .foregroundColor(.gray)
                             .font(.system(size: 12))
                 }
@@ -38,7 +42,7 @@ struct NotificationCell: View {
             
             Spacer()
                 
-                if notification.type == .follow {
+                if viewModel.notification.type == .follow {
                     Text("Follow")
                         .font(.system(size: 14, weight: .semibold))
                         .frame(width: 100, height: 32)
@@ -51,7 +55,7 @@ struct NotificationCell: View {
                     )
                 }
                 else {
-                    if let post = notification.post {
+                    if let post = viewModel.notification.post {
                         KFImage(URL(string: post.imageURL))
                             .resizable()
                             .scaledToFill()

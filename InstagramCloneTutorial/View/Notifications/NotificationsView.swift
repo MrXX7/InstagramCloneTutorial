@@ -14,16 +14,10 @@ struct NotificationsView: View {
         ScrollView {
             LazyVStack {
                 ForEach(viewModel.notifications) { notification in
-                    NotificationCell(notification: notification)
+                    NotificationCell(viewModel: NotificationsCellViewModel(notification: notification))
                         .padding(.top)
                 }
             }
         }
-    }
-}
-
-struct NotificationsView_Previews: PreviewProvider {
-    static var previews: some View {
-        NotificationsView()
     }
 }
