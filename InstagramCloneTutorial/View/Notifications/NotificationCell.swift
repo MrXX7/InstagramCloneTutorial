@@ -65,7 +65,7 @@ struct NotificationCell: View {
                 }
                 else {
                     if let post = viewModel.notification.post {
-                        NavigationLink(destination: FeedCell(viewModel: FeedCellViewModel(post: post))) {
+                        NavigationLink(destination: ScrollView {FeedCell(viewModel: FeedCellViewModel(post: post))}) {
                         KFImage(URL(string: post.imageURL))
                             .resizable()
                             .scaledToFill()
