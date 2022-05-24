@@ -15,6 +15,7 @@ class NotificationsCellViewModel: ObservableObject {
     init(notification: Notification) {
         self.notification = notification
         fetchUser()
+        fetchPost()
     }
     
     var timestamp: String {
@@ -31,6 +32,19 @@ class NotificationsCellViewModel: ObservableObject {
                 return
             }
         self.notification.user = try? snap?.data(as: User.self)
+        }
+    }
+    
+    func fetchPost() {
+        
+        guard let postID = notification.postId else { return }
+        
+        Firestore.firestore().collection("posts").document(postID).getDocument { (snap, err) in
+            if let err = err {
+                print(err.localizedDescription)
+                return
+            }
+            self.notification.post = try? snap?.data(as: Post.self)
         }
     }
     
@@ -61,7 +75,7 @@ class NotificationsCellViewModel: ObservableObject {
         
         guard notification.type == .follow else { return }
         
-        UserService.checkFollow(userId: userId) { didFollow in
+        UserService.checkFollow(userId: notification.uid) { didFollow in
             self.notification.didFollow = didFollow
         }
     }
