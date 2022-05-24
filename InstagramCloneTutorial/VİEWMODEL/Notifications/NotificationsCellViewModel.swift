@@ -33,4 +33,36 @@ class NotificationsCellViewModel: ObservableObject {
         self.notification.user = try? snap?.data(as: User.self)
         }
     }
+    
+    func follow() {
+        
+        UserService.follow(uid: notification.uid) { (err) in
+            if let err = err {
+                print(err.localizedDescription)
+                return
+            }
+            NotificationViewModel.sendNotification(withUid: self.notification.uid, type: .follow)
+            self.notification.didFollow = true
+        }
+    }
+    
+    func unfollow() {
+        
+        UserService.unfollow(uid: notification.uid) { (err) in
+            if let err = err {
+                print(err.localizedDescription)
+                return
+            }
+            self.notification.didFollow = false
+        }
+    }
+    
+    func checkFollow() {
+        
+        guard notification.type == .follow else { return }
+        
+        UserService.checkFollow(userId: userId) { didFollow in
+            self.notification.didFollow = didFollow
+        }
+    }
 }

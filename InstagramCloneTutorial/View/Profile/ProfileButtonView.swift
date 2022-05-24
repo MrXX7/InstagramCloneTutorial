@@ -46,7 +46,8 @@ struct ProfileButtonView: View {
                             RoundedRectangle(cornerRadius: 3)
                                 .stroke(Color.gray, lineWidth: didFollow ? 1 : 0)
                             )
-                    }
+                        }.cornerRadius(3)
+                    
                            Button {} label: {
                         Text("Message")
                             .font(.system(size: 14, weight: .semibold))

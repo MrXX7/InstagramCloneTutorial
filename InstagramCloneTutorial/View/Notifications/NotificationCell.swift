@@ -16,6 +16,10 @@ struct NotificationCell: View {
         self.viewModel = viewModel
     }
     
+    var didFollow: Bool {
+        return viewModel.notification.didFollow ?? false
+    }
+    
     var body: some View {
         HStack {
             if let user = viewModel.notification.user {
@@ -43,19 +47,25 @@ struct NotificationCell: View {
             Spacer()
                 
                 if viewModel.notification.type == .follow {
-                    Text("Follow")
-                        .font(.system(size: 14, weight: .semibold))
-                        .frame(width: 100, height: 32)
-                        .foregroundColor(.white)
-                        .background(.blue)
-                        .cornerRadius(3)
-                        .overlay(
+                    
+                    Button {
+                        didFollow ? viewModel.unfollow() : viewModel.follow()
+                        }
+                        label: {
+                            Text(didFollow ? "Following" : "Follow")
+                            .font(.system(size: 14, weight: .semibold))
+                            .frame(width: 100, height: 32)
+                            .foregroundColor(didFollow ? .black : .white)
+                            .background(didFollow ? Color.white : Color.blue)
+                            .overlay(
                             RoundedRectangle(cornerRadius: 3)
-                                .stroke(Color.gray, lineWidth: 1)
-                    )
+                                .stroke(Color.gray, lineWidth: didFollow ? 1 : 0)
+                            )
+                        }.cornerRadius(3)
                 }
                 else {
                     if let post = viewModel.notification.post {
+                        NavigationLink(destination: FeedCell(viewModel: FeedCellViewModel(post: post))) {
                         KFImage(URL(string: post.imageURL))
                             .resizable()
                             .scaledToFill()
