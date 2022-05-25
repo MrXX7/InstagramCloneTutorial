@@ -21,8 +21,8 @@ struct CommentsView: View {
         VStack {
         ScrollView {
             LazyVStack(alignment: .leading, spacing: 24) {
-                ForEach(0..<10) { _ in
-                    CommentsCellView()
+                ForEach(viewModel.comments) { comment in
+                    CommentsCellView(comment: comment)
                 }
             }
         }

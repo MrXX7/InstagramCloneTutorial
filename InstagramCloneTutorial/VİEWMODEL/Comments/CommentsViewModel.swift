@@ -12,6 +12,8 @@ class CommentsViewModel: ObservableObject {
     
     let post: Post
     
+    @Published var comments = [Comment]()
+    
     init(post: Post) {
         self.post = post
     }
@@ -35,6 +37,18 @@ class CommentsViewModel: ObservableObject {
                 return
             }
             NotificationViewModel.sendNotification(withUid: self.post.ownerUid, type: .comment, post: self.post)
+        }
+    }
+    func fetchComment() {
+        guard let postID = post.id else { return }
+        Firestore.firestore().collection("posts").document(postID).collection("post-comments").order(by: "timestamp", descending: true).addSnapshotListener { (snap, err) in
+            if let err = err {
+                print(err.localizedDescription)
+                return
+            }
+            guard let documents = snap?.documentChanges.filter({ $0.type == .added}) else { return }
+            
+            self.comments.append(contentsOf: documents.compactMap({ try? $0.document.data(as: Comment.self)}))
         }
     }
 }

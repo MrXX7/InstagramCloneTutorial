@@ -6,36 +6,34 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct CommentsCellView: View {
+    
+    let comment: Comment
+    
     var body: some View {
         HStack {
-            Image("ted")
+            KFImage(URL(string: comment.profileImageURL))
                 .resizable()
                 .scaledToFill()
                 .frame(width: 36, height: 36)
                 .clipShape(Circle())
                 
             HStack {
-                Text("tedmosby")
+                Text(comment.username)
                     .font(.system(size: 14,weight: .semibold))
                 +
-                Text(" Post Comment")
+                Text(" \(comment.comment)")
                     .font(.system(size: 14))
                 
                 Spacer()
                 
-                Text("2H")
+                Text(comment.timestampText ?? "")
                     .foregroundColor(.gray)
                     .font(.system(size: 12))
                     .padding(.trailing)
             }
         }.padding(.horizontal)
-    }
-}
-
-struct CommentsCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        CommentsCellView()
     }
 }
