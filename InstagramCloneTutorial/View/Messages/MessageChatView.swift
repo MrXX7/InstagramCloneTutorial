@@ -12,12 +12,15 @@ struct MessageChatView: View {
     @ObservedObject var viewModel: MessagesViewModel
     
     init(user: User) {
-        self.viewModel = MessagesViewModel(user: user)
+        self.viewModel = MessagesViewModel(userId: userId)
     }
     
     var body: some View {
         VStack {
             MessageInputView(message: $message, action: sendMessage)
+                .onAppear{
+                    print(viewModel.messages)
+                }
         }
         
     }

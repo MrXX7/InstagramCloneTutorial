@@ -63,6 +63,7 @@
 		ADE6607F282D0E96001586BC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6607E282D0E96001586BC /* CustomTextField.swift */; };
 		ADE66083282D1EA4001586BC /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE66082282D1EA4001586BC /* CustomSecureField.swift */; };
 		ADE66085282D3448001586BC /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE66084282D3448001586BC /* ForgotPasswordView.swift */; };
+		ADFCD9E92841396F005BC488 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCD9E82841396F005BC488 /* Message.swift */; };
 		ADFF909F2835E7E1006DD74B /* FeedCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF909E2835E7E1006DD74B /* FeedCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +119,7 @@
 		ADE6607E282D0E96001586BC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		ADE66082282D1EA4001586BC /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		ADE66084282D3448001586BC /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		ADFCD9E82841396F005BC488 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		ADFF909E2835E7E1006DD74B /* FeedCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -260,6 +262,7 @@
 				AD892C252832C4AB00652186 /* Post.swift */,
 				AD75FD6628395C6500FE2BA0 /* Notifications.swift */,
 				AD7504D5283EAD000063647D /* Comment.swift */,
+				ADFCD9E82841396F005BC488 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				ADE6607F282D0E96001586BC /* CustomTextField.swift in Sources */,
 				AD75FD6728395C6500FE2BA0 /* Notifications.swift in Sources */,
 				AD072345283AC03E00786136 /* CommentsView.swift in Sources */,
+				ADFCD9E92841396F005BC488 /* Message.swift in Sources */,
 				AD977D5E282988680082957B /* PostGridView.swift in Sources */,
 				AD9E2FED28374A470045E7E7 /* UserService.swift in Sources */,
 				ADCD67C3283258C300001D7B /* ImageUploader.swift in Sources */,

@@ -48,8 +48,8 @@ struct ProfileButtonView: View {
                             )
                         }.cornerRadius(3)
                     
-                    if let user = viewModel.user {
-                    NavigationLink(destination: MessageChatView(user: viewModel.user)) {
+                    if let user = viewModel.user.id {
+                    NavigationLink(destination: MessageChatView(userId: userId)) {
                      Text("Message")
                          .font(.system(size: 14, weight: .semibold))
                          .frame(width: 172, height: 36)

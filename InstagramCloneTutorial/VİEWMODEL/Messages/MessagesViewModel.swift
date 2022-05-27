@@ -8,12 +8,29 @@
 import SwiftUI
 import Firebase
 
-class MessagesViewModel: ObservableObject {
+class MessagesViewModel: ObservableObject{
     
-    let user: User
+    @Published var messages = [Message]()
     
-    init(user: User) {
-        self.user = user
+    let currentUserID: String
+    
+    init(userId: String) {
+        self.currentUserID = userId
+        fetchMessages(withUid: currentUserID)
+    }
+    
+    func fetchMessages(withUid currentProfileId: String) {
+        
+        guard let currentUserId = AuthViewModel.shared.userSession?.uid else { return }
+        
+        Firestore.firestore().collection("messages").document(currentUserId).collection("user-messages").document(currentProfileId).collection("messages").addSnapshotListener{ (snap, err) in
+            if let err = err {
+                print(err.localizedDescription)
+                return
+            }
+            guard let document = snap?.documentChanges.filter({ $0.type == .added}) else { return }
+            self.messages.append(contentsOf: document.compactMap({ try? $0.document.data(as: Message.self)}))
+        }
     }
     
     func sendMessage(message: String) {
