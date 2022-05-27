@@ -20,6 +20,8 @@
 		AD44C3C3282AE2070073B943 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD44C3C2282AE2070073B943 /* SearchBar.swift */; };
 		AD44C3C5282AFAD50073B943 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD44C3C4282AFAD50073B943 /* Extensions.swift */; };
 		AD49CF1A2840706E00576763 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD49CF192840706E00576763 /* LazyView.swift */; };
+		AD49CF1E2840791D00576763 /* MessageChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD49CF1D2840791D00576763 /* MessageChatView.swift */; };
+		AD49CF202840794E00576763 /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD49CF1F2840794E00576763 /* MessageInputView.swift */; };
 		AD4B1409283B6C72002EDBF0 /* NotificationsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4B1408283B6C72002EDBF0 /* NotificationsCellViewModel.swift */; };
 		AD554DC32827B6D4006DF648 /* InstagramCloneTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD554DC22827B6D4006DF648 /* InstagramCloneTutorialApp.swift */; };
 		AD554DC72827B6D7006DF648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD554DC62827B6D7006DF648 /* Assets.xcassets */; };
@@ -77,6 +79,8 @@
 		AD44C3C2282AE2070073B943 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		AD44C3C4282AFAD50073B943 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AD49CF192840706E00576763 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
+		AD49CF1D2840791D00576763 /* MessageChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageChatView.swift; sourceTree = "<group>"; };
+		AD49CF1F2840794E00576763 /* MessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
 		AD4B1408283B6C72002EDBF0 /* NotificationsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsCellViewModel.swift; sourceTree = "<group>"; };
 		AD554DBF2827B6D4006DF648 /* InstagramCloneTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramCloneTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD554DC22827B6D4006DF648 /* InstagramCloneTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCloneTutorialApp.swift; sourceTree = "<group>"; };
@@ -157,6 +161,21 @@
 			path = Items;
 			sourceTree = "<group>";
 		};
+		AD49CF1B284078E700576763 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				AD49CF1D2840791D00576763 /* MessageChatView.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		AD49CF1C284078FA00576763 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
 		AD554DB62827B6D4006DF648 = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +218,7 @@
 		AD554DD52827B7B0006DF648 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AD49CF1C284078FA00576763 /* Messages */,
 				AD0ACBCA283D3CEE00E54E76 /* Comments */,
 				AD75FD6328395C1400FE2BA0 /* Notifications */,
 				AD22EDDE283583940027DF42 /* Items */,
@@ -216,6 +236,7 @@
 		AD554DD62827B7BF006DF648 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AD49CF1B284078E700576763 /* Messages */,
 				AD072341283ABFFF00786136 /* Comments */,
 				ADE66079282D0D6D001586BC /* Authentications */,
 				AD977D5C282988510082957B /* Items */,
@@ -374,6 +395,7 @@
 				AD9362EE282C2CE100FD5BE2 /* TextArea.swift */,
 				AD37EC24283D04A1007A0D75 /* CommentInputView.swift */,
 				AD49CF192840706E00576763 /* LazyView.swift */,
+				AD49CF1F2840794E00576763 /* MessageInputView.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -471,10 +493,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD49CF1E2840791D00576763 /* MessageChatView.swift in Sources */,
 				AD288ABE28333AC000E45FBC /* SearchViewModel.swift in Sources */,
 				AD072343283AC02B00786136 /* CommentsCellView.swift in Sources */,
 				AD2BF0432830FDD8003AD427 /* User.swift in Sources */,
 				AD554DF228280891006DF648 /* SearchView.swift in Sources */,
+				AD49CF202840794E00576763 /* MessageInputView.swift in Sources */,
 				ADE6607B282D0D8D001586BC /* RegisterView.swift in Sources */,
 				AD2BF045283143DF003AD427 /* ProfileViewModel.swift in Sources */,
 				AD554DF6282808AB006DF648 /* MainView.swift in Sources */,

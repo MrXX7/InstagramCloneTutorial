@@ -48,16 +48,17 @@ struct ProfileButtonView: View {
                             )
                         }.cornerRadius(3)
                     
-                           Button {} label: {
-                        Text("Message")
-                            .font(.system(size: 14, weight: .semibold))
-                            .frame(width: 172, height: 36)
-                            .foregroundColor(.black)
-                            .overlay(
-                            RoundedRectangle(cornerRadius: 3)
-                                .stroke(Color.gray, lineWidth: 1)
-                            )
+                    NavigationLink(destination: MessageChatView()) {
+                     Text("Message")
+                         .font(.system(size: 14, weight: .semibold))
+                         .frame(width: 172, height: 36)
+                         .foregroundColor(.black)
+                         .overlay(
+                         RoundedRectangle(cornerRadius: 3)
+                             .stroke(Color.gray, lineWidth: 1)
+                              )
                            }
+                        }
                     }
                 }
           }
