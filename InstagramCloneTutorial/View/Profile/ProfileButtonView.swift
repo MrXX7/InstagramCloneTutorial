@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfileButtonView: View {
     
     @ObservedObject var viewModel: ProfileViewModel
+    @State var editProfileShow = false
     
     var didFollow: Bool {
         return viewModel.user.didFollow ?? false
@@ -29,8 +30,10 @@ struct ProfileButtonView: View {
                     RoundedRectangle(cornerRadius: 3)
                     .stroke(Color.gray, lineWidth: 1)
                     )
-                }
-            }
+            }.sheet(isPresented: $editProfileShow, content: {
+            EditProfileView()
+            })
+    }
                    else {
                 HStack(spacing: 16) {
                     Button {
