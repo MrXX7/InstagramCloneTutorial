@@ -60,6 +60,13 @@ struct ProfileHeaderView: View {
                 .padding([.leading, .top])
                 .padding(.leading, 20)
             
+            if let bio = viewModel.user.bio {
+            Text(bio)
+                .font(.system(size: 15))
+                .padding(.leading)
+                .padding(.top, 1)
+            }
+            
             HStack {
                 Spacer()
             ProfileButtonView(viewModel: viewModel)

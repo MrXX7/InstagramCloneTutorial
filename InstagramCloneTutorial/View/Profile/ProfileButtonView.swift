@@ -20,7 +20,7 @@ struct ProfileButtonView: View {
         if viewModel.user.isCurrentUser {
             
             Button {
-                
+                self.editProfileShow.toggle()
             } label: {
                 Text("Edit Profile")
                     .font(.system(size: 14, weight: .semibold))
@@ -31,7 +31,7 @@ struct ProfileButtonView: View {
                     .stroke(Color.gray, lineWidth: 1)
                     )
             }.sheet(isPresented: $editProfileShow, content: {
-            EditProfileView()
+                EditProfileView(user: $viewModel.user)
             })
     }
                    else {
